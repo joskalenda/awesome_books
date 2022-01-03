@@ -21,14 +21,20 @@ class ObjectBook {
       </article>`;
     });
 
-  Container.innerHTML = books;
-  this.removeButton = document.querySelectorAll('button.rmBtn');
-  this.removeButton.forEach((btn, index) => {
-  btn.addEventListener('click', (e) => {
-  e.preventDefault();
-  this.removeBook(index);
-  });
-  });
+    Container.innerHTML = books;
+    this.removeButton = document.querySelectorAll('button.rmBtn');
+    this.removeButton.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    this.removeBook(index);
+    });
+    });
   }
   
+  removeBook(id) {
+    this.booksList = JSON.parse(localStorage.getItem('storageFormData'));
+    const filteredArray = this.booksList.filter((book) => this.booksList.indexOf(book) !== id);
+    localStorage.setItem('storageFormData', JSON.stringify(filteredArray));
+    this.createElement(filteredArray);
+  }
   
