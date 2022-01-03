@@ -37,4 +37,20 @@ class ObjectBook {
     localStorage.setItem('storageFormData', JSON.stringify(filteredArray));
     this.createElement(filteredArray);
   }
+
+  addBook() {
+    addBtn.addEventListener('click', (e) => {
+      if (this.author.value === '' || this.title.value === '') return;
+      e.preventDefault();
+      const localStorageObject = {
+        authorBook: this.author.value,
+        titleBook: this.title.value,
+      };
+      const listBooks = JSON.parse(localStorage.getItem('storageFormData')) || [];
+      listBooks.push(localStorageObject);
+      localStorage.setItem('storageFormData', JSON.stringify(listBooks));
+      this.createElement(listBooks);
+    });
+    }
+    
   
