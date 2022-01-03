@@ -1,16 +1,23 @@
-const books = document.querySelector('.obect-class');
+const Container = document.querySelector('.container');
 const inputTitle = document.querySelector('#title-id');
 const inputAuthor = document.querySelector('#author-id');
-const addBtn = document.querySelector('#add--btn');
-const  Val_title = inputTitle.value;
-const Val_author =  inputAuthor.value;
+const addBtn = document.querySelector('#btn');
 
-class Obectstore {
+class ObjectBook {
   constructor(title, author) {
-    this.BookTitle = title;
-    this.BookAuthor = author;
+    this.title = title;
+    this.author = author;
+    this.removeButton = [];
+    this.booksList = [];
+    
   }
-}
-const BOOK = new Obectstore($(Val_title), $(Val_author));
-
-
+  createElement(list) {
+    let books = '';
+    list.forEach((div) => {
+      books += `<article class="author-title-div">
+      <h3>${div.authorBook}</h3>
+      <h3>${div.titleBook}</h3>
+      <button class="rmBtn">Remove</button>
+      </article>`;
+    });
+  
