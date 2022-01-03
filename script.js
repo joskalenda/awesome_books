@@ -20,4 +20,15 @@ class ObjectBook {
       <button class="rmBtn">Remove</button>
       </article>`;
     });
+
+  Container.innerHTML = books;
+  this.removeButton = document.querySelectorAll('button.rmBtn');
+  this.removeButton.forEach((btn, index) => {
+  btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  this.removeBook(index);
+  });
+  });
+  }
+  
   
