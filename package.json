@@ -1,0 +1,23 @@
+{
+  "name": "awesome_books",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joskalenda/awesome_books.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joskalenda/awesome_books/issues"
+  },
+  "homepage": "https://github.com/joskalenda/awesome_books#readme",
+  "devDependencies": {
+    "hint": "^6.1.9"
+  }
+}
