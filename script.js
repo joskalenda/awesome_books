@@ -69,4 +69,3 @@ Store.addBook();
 window.addEventListener('load', () => {
   Store.onPageLoad();
 });
-// }
