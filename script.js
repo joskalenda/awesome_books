@@ -9,8 +9,8 @@ class ObjectBook {
     this.author = author;
     this.removeButton = [];
     this.booksList = [];
-    
   }
+
   createElement(list) {
     let books = '';
     list.forEach((div) => {
@@ -24,13 +24,13 @@ class ObjectBook {
     Container.innerHTML = books;
     this.removeButton = document.querySelectorAll('button.rmBtn');
     this.removeButton.forEach((btn, index) => {
-    btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    this.removeBook(index);
-    });
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.removeBook(index);
+      });
     });
   }
-  
+
   removeBook(id) {
     this.booksList = JSON.parse(localStorage.getItem('storageFormData'));
     const filteredArray = this.booksList.filter((book) => this.booksList.indexOf(book) !== id);
@@ -53,8 +53,20 @@ class ObjectBook {
     });
   }
 
-
-
-
+  onPageLoad() {
+    if (this.booksList.length === 0) {
+      if (JSON.parse(localStorage.getItem('storageFormData'))) {
+        this.booksList = JSON.parse(localStorage.getItem('storageFormData'));
+        this.createElement(this.booksList);
+      }
+    }
+  }
 }
-  
+const Store = new ObjectBook(inputTitle, inputAuthor);
+Store.booksList = JSON.parse(localStorage.getItem('storageFormData')) || [];
+Store.createElement(Store.booksList);
+Store.addBook();
+window.addEventListener('load', () => {
+  Store.onPageLoad();
+});
+// }
