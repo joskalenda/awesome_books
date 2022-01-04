@@ -49,7 +49,7 @@ class ObjectBook {
       listBooks.push(localStorageObject);
       localStorage.setItem('storageFormData', JSON.stringify(listBooks));
       this.createElement(listBooks);
-      this.author.value = ''; 
+      this.author.value = '';
       this.title.value = '';
     });
   }
