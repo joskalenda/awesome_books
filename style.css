@@ -15,12 +15,6 @@ body {
   margin: 0.625rem 0.4rem 0 0.4rem;
 }
 
-.display-div:nth-child(odd) {
-  background-color: lightgray;
-}
-
-
-
 .display-div {
   text-align: center;
   justify-content: space-between;
@@ -28,6 +22,10 @@ body {
   padding: 8px;
   width: 100%;
   margin: 0;
+}
+
+.display-div:nth-child(odd) {
+  background-color: lightgray;
 }
 
 h2 {
@@ -57,14 +55,21 @@ input::placeholder {
   font-weight: bold;
 }
 
-.add--btn,
-.rmBtn {
-  font-size: 24px;
+.add--btn {
+  font-size: 22px;
   padding: 0 0.25rem;
   border: 2px solid #000;
   box-shadow: 2px 2px 5px 3px #000;
-  font-size: 0.9rem;
   font-weight: bold;
   text-align: end;
   transform: translateX(5.1rem);
+}
+
+.rmBtn {
+  font-size: 22px;
+  padding: 0 0.25rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 5px 3px #000;
+  font-weight: bold;
+  text-align: end;
 }
