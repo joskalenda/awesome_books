@@ -32,13 +32,14 @@ h2 {
   font-size: 38px;
   text-align: center;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 
 h2::before {
   display: block;
-  position: fixed;
+  position: relative;
+  margin-bottom: 40px;
   content: " ";
   background-color: #000;
   height: 4px;
