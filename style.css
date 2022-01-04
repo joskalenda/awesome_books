@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+input {
+  font-size: 24px;
+}
+
+button {
+  font-size: 24px;
+}
