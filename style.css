@@ -33,15 +33,15 @@ a {
 }
 
 a:hover {
-  color: #777;
+  color: dodgerblue;
 }
 
 .a-link {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .dots {
-  width: 130px;
+  width: 150px;
   text-decoration: none;
   list-style: none;
   flex-direction: row;
@@ -138,4 +138,47 @@ input::placeholder {
   box-shadow: 2px 2px 5px 3px #000;
   font-weight: bold;
   text-align: end;
+}
+
+.contact-section {
+  flex: 1 0 auto;
+  color: #000;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 150px;
+}
+
+.contact-section h3 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 40px;
+}
+
+.contact-info-list {
+  display: block;
+  margin: 30px;
+}
+
+.contact-info-list li {
+  display: list-item;
+  list-style: none;
+}
+
+footer {
+  width: 100%;
+  border: 2px solid #000;
+  margin-top: 40px;
+  flex-shrink: 0;
+}
+
+.footer {
+  text-align: start;
+  padding: 30px;
+  padding-left: 1em;
+  font-size: 22px;
+}
+
+.footer p {
+  font-size: 26px;
+  font-weight: 700;
 }
