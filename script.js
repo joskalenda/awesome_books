@@ -55,18 +55,15 @@ class ObjectBook {
       this.title.value = '';
     });
   }
-  
+
   Clock() {
-    /*eslint-disable*/
     window.addEventListener('load', () => {
       const DateTime = new Date();
-      // this.time = DateTime.now();
-      document.querySelector('#timer-p').innerHTML = DateTime.toLocaleString(); 
+      this.time = DateTime;
+      document.querySelector('#timer-p').innerHTML = DateTime.toLocaleString();
     });
-    /*eslint-enable*/
-
   }
-  
+
   onPageLoad() {
     if (this.booksList.length === 0) {
       if (JSON.parse(localStorage.getItem('storageFormData'))) {
