@@ -15,7 +15,7 @@ class ObjectBook {
     let books = '';
     list.forEach((div) => {
       books += `<article class="display-div">
-      <h3>'${div.authorBook}' by ${div.titleBook}</h3>
+      <h3>'${div.titleBook}' by ${div.authorBook}</h3>
       <button class="rmBtn">Remove</button>
       </article>`;
     });
@@ -49,8 +49,18 @@ class ObjectBook {
       listBooks.push(localStorageObject);
       localStorage.setItem('storageFormData', JSON.stringify(listBooks));
       this.createElement(listBooks);
+      const message = document.querySelector('#message');
+      message.innerHTML = `Book "${this.title.value}" added succesfully`;
       this.author.value = '';
       this.title.value = '';
+    });
+  }
+
+  Clock() {
+    window.addEventListener('load', () => {
+      const DateTime = new Date();
+      this.time = DateTime;
+      document.querySelector('#timer-p').innerHTML = DateTime.toLocaleString();
     });
   }
 
@@ -67,6 +77,7 @@ const Store = new ObjectBook(inputTitle, inputAuthor);
 Store.booksList = JSON.parse(localStorage.getItem('storageFormData')) || [];
 Store.createElement(Store.booksList);
 Store.addBook();
+Store.Clock();
 window.addEventListener('load', () => {
   Store.onPageLoad();
 });
