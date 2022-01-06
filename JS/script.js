@@ -60,7 +60,7 @@ class ObjectBook {
     window.addEventListener('load', () => {
       const DateTime = new Date();
       this.time = DateTime;
-      document.querySelector('#timer-p').innerHTML = DateTime.toLocaleString();
+      document.querySelector('#timer-p').innerHTML = `Date and time: ${DateTime.toLocaleString()}`;
     });
   }
 

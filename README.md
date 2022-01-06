@@ -1,8 +1,13 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Awesome books
-
  Awesome book website, small online library to store books when added to the list we have implemented this using a plaint javascript, this is the best of it!
+
+ ## Desktop only
+ 
+> || Desktop version representation||
+> |-|---------|-|
+> || ![Screenshot1](/img/mobile.html.png) 
 ## Built With
 
 - HTML
